@@ -34,6 +34,3 @@ jobs:
 
       - name: Build CLI app 🏗️
         run: make build
-
-      - name: Build web app 🏗️
-        run: make build-web
