@@ -1,8 +1,8 @@
-# Deno Project Template 📦 🦕 ✨
-> Starter template for a new Deno project
+# React Deno Quickstart ⚛️ 🦕 📦
+> Starter for a React app built on Deno - including docs and CI
 
-[![Deno CI](https://github.com/MichaelCurrin/deno-project-template/workflows/Deno%20CI/badge.svg)](https://github.com/MichaelCurrin/deno-project-template/actions?query=workflow:"Deno+CI" "GitHub Actions CI")
-[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/deno-project-template?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/deno-project-template/releases/)
+[![Deno CI](https://github.com/MichaelCurrin/react-deno-quickstart/workflows/Deno%20CI/badge.svg)](https://github.com/MichaelCurrin/react-deno-quickstart/actions?query=workflow:"Deno+CI" "GitHub Actions CI")
+[![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/react-deno-quickstart?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/react-deno-quickstart/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Deno](https://img.shields.io/badge/Deno-1.x-blue?logo=deno&logoColor=white)](https://deno.land)
@@ -42,7 +42,7 @@ See the [Template notes](/docs/template-notes/) section of the docs for an intro
 
 <div align="center">
 
-[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/deno-project-template/generate)
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
 </div>
 

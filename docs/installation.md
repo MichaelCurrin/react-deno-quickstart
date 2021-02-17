@@ -6,8 +6,8 @@
 Clone this repo.
 
 ```sh
-$ git clone git@github.com:MichaelCurrin/deno-project-template.git
-$ cd deno-project-template
+$ git clone git@github.com:MichaelCurrin/react-deno-quickstart.git
+$ cd react-deno-quickstart
 ```
 
 

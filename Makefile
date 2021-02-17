@@ -2,8 +2,8 @@ IGNORE = --ignore=build,public,docs,README.md
 CONFIG = --config tsconfig.json
 
 OUT_DIR = build
-BUNDLED := $(OUT_DIR)/deno-project-template.bundle.js
-COMPILED := $(OUT_DIR)/deno-project-template
+BUNDLED := $(OUT_DIR)/react-deno-quickstart.bundle.js
+COMPILED := $(OUT_DIR)/react-deno-quickstart
 
 .PHONY: hooks $(OUT_DIR)
 

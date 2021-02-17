@@ -21,8 +21,8 @@ $ make build
 
 That will generate two files:
 
-- Self-contained ES module: `build/deno-project-template.js`
-- Binary executable: `build/deno-project-template`
+- Self-contained ES module: `build/react-deno-quickstart.js`
+- Binary executable: `build/react-deno-quickstart`
 
 See more info in my
 [Deno CLI](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/javascript/deno/cli/)
@@ -35,7 +35,7 @@ Deno.
 Test the generated JS file using Deno.
 
 ```sh
-$ deno run build/deno-project-template.bundle.js --name deployer
+$ deno run build/react-deno-quickstart.bundle.js --name deployer
 ```
 
 ```
@@ -48,7 +48,7 @@ Hello, deployer!
 Run the executable.
 
 ```sh
-$ build/deno-project-template --name deployer
+$ build/react-deno-quickstart --name deployer
 ```
 
 ```
