@@ -6,39 +6,40 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Deno](https://img.shields.io/badge/Deno-1.x-blue?logo=deno&logoColor=white)](https://deno.land)
+[![Made with React](https://img.shields.io/badge/React-17-blue?logo=react&logoColor=white)](https://www.npmjs.com/package/react)
 
 
 ## Sample usage
 
-Install dependencies and run the Hello, World CLI app - using this one command:
+Start dev server:
 
 ```sh
-$ deno run index.ts --config tsconfig.json --name "friend"
-Hello, friend!
+$ make serve
 ```
 
-Or simply, with `make`:
+Production bundle - bundle the app as a single JS file for distribution.
 
 ```sh
-$ make run
-Hello, World!
+$ make build
 ```
+
+The JS file then can be loaded the `index.html`. So you can host your React Deno application as a website anywhere such as on GitHub Pages or Netlify.
+
 
 ## About this template
 
-See the [Template notes](/docs/template-notes/) section of the docs for an intro to Deno and to see some usage examples.
+See the [Template notes](/docs/template-notes/) section of the docs for help.
 
-### Template featurse
+### Template features
 
-- Outline of a basic Deno application.
-- Comes with a CLI app and browser app so you can use either.
-    - CLI app - see [index.ts](/index.ts).
-    - Browser app - you can compile and distribute as plain JS and load in the sample HTML page - see [website.ts](/website.ts) and (/website.ts).
+- Outline of a basic React built with React.
+- Start a dev server
+- Create a production build.
 - Uses `make` as an easy Deno task runner - see [Makefile](/Makefile) or run `make help`.
 - Documentation is included - see [docs/](/docs/).
 - GitHub Actions CI is included - see workflow in [.github/](/.github/).
 
-### Start coding with Deno
+### Start building with React and Deno
 
 <div align="center">
 
