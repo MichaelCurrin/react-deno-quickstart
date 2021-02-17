@@ -2,8 +2,5 @@
 
 <!-- You can delete this directory on your copy of this template. -->
 
-Getting started:
-
-- [Why Deno?](why-deno.md)
-- [Sample usage](sample-usage.md)
-- [Related projects](related-projects.md)
+- [Deno](https://michaelcurrin.github.io/dev-resources/resources/javascript/deno/) resources.
+- [React](https://github.com/MichaelCurrin/learn-to-code/blob/master/en/topics/scripting_languages/JavaScript/libraries/react.md) resources.
