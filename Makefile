@@ -2,15 +2,14 @@ IGNORE = --ignore=build,public,docs,README.md
 CONFIG = --config tsconfig.json
 
 OUT_DIR = build
-BUNDLED := $(OUT_DIR)/react-deno-quickstart.bundle.js
-COMPILED := $(OUT_DIR)/react-deno-quickstart
+BUNDLED := $(OUT_DIR)/bundle.js
 
 .PHONY: hooks $(OUT_DIR)
 
 
 default: install
 
-all: hooks install fmt lint test build build-web
+all: hooks install fmt lint test build
 
 
 h help:
@@ -22,11 +21,11 @@ hooks:
 
 install:
 	deno cache deps.ts
-	deno cache test_deps.ts
+	deno cache dev_deps.ts
 
 upgrade:
 	deno cache --reload deps.ts
-	deno cache --reload test_deps.ts
+	deno cache --reload dev_deps.ts
 
 
 fmt:
@@ -42,26 +41,17 @@ test:
 	deno test
 
 
-run:
-	deno run index.ts $(CONFIG) --name "$(name)"
-
-watch:
-	mkdir -p $(OUT_DIR)
-	deno bundle $(CONFIG) --unstable --watch index.ts $(BUNDLED)
-
-
-# CLI app.
-build:
-	mkdir -p $(OUT_DIR)
-	deno bundle $(CONFIG) index.ts $(BUNDLED)
-	deno compile $(CONFIG) --unstable -o $(COMPILED) index.ts
-
-# Frontend app.
-build-web:
-	mkdir -p $(OUT_DIR)
-	deno bundle $(CONFIG) website.ts public/website.bundle.js
-	deno bundle $(CONFIG) website2.ts public/website2.bundle.js
+s serve:
+	deno run $(CONFIG) --allow-net --unstable --watch server.jsx
 
 
 clean:
 	rm -rf $(OUT_DIR)
+
+build:
+	mkdir -p $(OUT_DIR)
+	cp public/index.html $(OUT_DIR)
+	deno bundle $(CONFIG) index.jsx $(BUNDLED)
+
+static: clean build
+	deno run $(CONFIG) --allow-net --allow-read static.ts
