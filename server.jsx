@@ -26,7 +26,7 @@ app.use((next) =>
 );
 
 app.get("/", App)
-  .static('/', 'public')
+  .static("/", "public")
   .start({ port: APP_PORT });
 
 console.log(`Dev server listening on http://localhost:${APP_PORT}`);
