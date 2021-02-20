@@ -4,7 +4,7 @@ export function App() {
   return <div>
     <link rel="stylesheet" href="/styles.css"></link>
 
-    <h1>React Deno Quickstart</h1>
+    <h1>React Deno Quickstart ⚛️ 🦕 📦</h1>
 
     <a href="https://github.com/MichaelCurrin/react-deno-quickstart">
       <img
