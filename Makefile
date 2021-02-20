@@ -51,7 +51,7 @@ clean:
 build:
 	mkdir -p $(OUT_DIR)
 	cp public/index.html $(OUT_DIR)
-	deno bundle $(CONFIG) index.jsx $(BUNDLED)
+	deno bundle $(CONFIG) src/index.jsx $(BUNDLED)
 
 static: clean build
 	deno run $(CONFIG) --allow-net --allow-read static.ts

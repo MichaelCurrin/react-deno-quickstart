@@ -3,7 +3,7 @@
  *
  * Start a dev server for React app. This works independently of an HTML page.
  */
-import { App } from "./App.jsx";
+import { App } from "./src/App.jsx";
 import { React } from "./deps.ts";
 import { Application, ReactDOMServer } from "./dev_deps.ts";
 

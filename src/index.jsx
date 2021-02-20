@@ -1,5 +1,5 @@
 import { App } from "./App.jsx";
-import { React, ReactDOM } from "./deps.ts";
+import { React, ReactDOM } from "../deps.ts";
 
 // TODO: Convert to .tsx.
 
