@@ -29,8 +29,5 @@ jobs:
       - name: Lint 🧐
         run: make lint
 
-      - name: Test 🚨
-        run: make test
-
       - name: Build CLI app 🏗️
         run: make build
