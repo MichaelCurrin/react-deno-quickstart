@@ -2,6 +2,9 @@
  * Server module.
  *
  * Start a dev server for React app. This works independently of an HTML page.
+ *
+ * Note that this relies on App.jsx and not index.jsx as the entrypoint. The rendering in index.jsx
+ * is only needed for static.ts module.
  */
 import { App } from "./src/App.jsx";
 import { React } from "./deps.ts";
@@ -23,6 +26,7 @@ app.use((next) =>
 );
 
 app.get("/", App)
+  .static('/', 'public')
   .start({ port: APP_PORT });
 
 console.log(`Dev server listening on http://localhost:${APP_PORT}`);

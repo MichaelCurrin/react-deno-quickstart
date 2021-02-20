@@ -42,7 +42,7 @@ test:
 
 
 s serve:
-	deno run $(CONFIG) --allow-net --unstable --watch server.jsx
+	deno run $(CONFIG) --allow-net --allow-read --unstable --watch server.jsx
 
 
 clean:
@@ -50,7 +50,7 @@ clean:
 
 build:
 	mkdir -p $(OUT_DIR)
-	cp public/index.html $(OUT_DIR)
+	cp public/* $(OUT_DIR)
 	deno bundle $(CONFIG) src/index.jsx $(BUNDLED)
 
 static: clean build
