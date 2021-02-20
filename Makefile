@@ -9,7 +9,7 @@ BUNDLED := $(OUT_DIR)/bundle.js
 
 default: install
 
-all: hooks install fmt lint test build
+all: hooks install fmt lint build
 
 
 h help:
