@@ -9,7 +9,7 @@ BUNDLED := $(OUT_DIR)/bundle.js
 
 default: install
 
-all: hooks install fmt lint build
+all: hooks install fmt-check lint build
 
 
 h help:
@@ -34,11 +34,8 @@ fmt:
 fmt-check:
 	deno fmt --check $(IGNORE) --unstable
 
-lint:
+l lint:
 	deno lint --unstable $(IGNORE)
-
-test:
-	deno test
 
 
 s serve:
