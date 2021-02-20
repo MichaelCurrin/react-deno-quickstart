@@ -4,56 +4,25 @@
 ## Build
 > Create a production build
 
-This sections covers how production build files can be generated and shared.
-
-With Deno, we can:
-
-- Bundle to a single JS file - which must be run with Deno but can be shared on
-  other OS architectures.
-- Compile to a binary executable - the output file can be run with without Deno,
-  but only for the same OS architecture. This step requires Deno v1.6 or higher.
-
-Run this command:
+This uses creates a bundled JS file in the `build` directory and copies static assets from `public`.
 
 ```sh
 $ make build
 ```
 
-That will generate two files:
-
-- Self-contained ES module: `build/react-deno-quickstart.js`
-- Binary executable: `build/react-deno-quickstart`
-
-See more info in my
-[Deno CLI](https://michaelcurrin.github.io/dev-cheatsheets/cheatsheets/javascript/deno/cli/)
-cheatsheets around building, running and distributing assets generated with
-Deno.
-
-
-## Test the bundled file
-
-Test the generated JS file using Deno.
+To test the production build locally, run this:
 
 ```sh
-$ deno run build/react-deno-quickstart.bundle.js --name deployer
+$ make static
 ```
 
-```
-Hello, deployer!
-```
+That uses the Deno package `abc` to serve the `build` directory.
 
+View in the browser:
 
-## Test the binary
+- http://localhost
 
-Run the executable.
-
-```sh
-$ build/react-deno-quickstart --name deployer
-```
-
-```
-Hello, deployer!
-```
+In production, you can use Nginx or a similar tool to serve your build directory. Or use GitHub Pages or Netlify to serve the build directory as static files.
 
 
 ## Clean

@@ -11,13 +11,13 @@
 
 ## Sample usage
 
-Start dev server:
+Start a dev server:
 
 ```sh
 $ make serve
 ```
 
-Production bundle - bundle the app as a single JS file for distribution.
+Create a bundled JS file to serve in production.
 
 ```sh
 $ make build
@@ -28,18 +28,10 @@ The JS file then can be loaded the `index.html`. So you can host your React Deno
 
 ## About this template
 
-See the [Template notes](/docs/template-notes/) section of the docs for help.
+See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
 
-### Template features
 
-- Outline of a basic React built with React.
-- Start a dev server
-- Create a production build.
-- Uses `make` as an easy Deno task runner - see [Makefile](/Makefile) or run `make help`.
-- Documentation is included - see [docs/](/docs/).
-- GitHub Actions CI is included - see workflow in [.github/](/.github/).
-
-### Start building with React and Deno
+## Start building with React and Deno
 
 <div align="center">
 
