@@ -1,5 +1,5 @@
 # React Deno Quickstart ⚛️ 🦕 📦
-> Starter for a React app built on Deno - including docs and CI
+> Starter template for a React app built on Deno - including docs and CI
 
 [![Deno CI](https://github.com/MichaelCurrin/react-deno-quickstart/workflows/Deno%20CI/badge.svg)](https://github.com/MichaelCurrin/react-deno-quickstart/actions?query=workflow:"Deno+CI" "GitHub Actions CI")
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/react-deno-quickstart?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/react-deno-quickstart/releases/)
