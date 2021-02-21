@@ -4,7 +4,7 @@
  * Note - shim must come before components so it can be applied there.
  */
 import { React } from "../deps.ts";
-import "./shim-jsx.ts";
+import "./shims-react.ts";
 import Counter from "./components/Counter.tsx";
 import GHBadge from "./components/GHBadge.tsx";
 
