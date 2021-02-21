@@ -1,4 +1,12 @@
 # Limitations
+> What this project is limited to and how you could extend it
+
+
+## Counter is broken
+
+For some reason, the [Counter](/src/components/Counter.tsx) component does nothing on the dev server. Not even a JS error on clicking the button.
+
+There is no issue when using static build.
 
 
 ## Tasks
