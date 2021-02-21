@@ -45,10 +45,14 @@ s serve:
 clean:
 	rm -rf $(OUT_DIR)
 
+minify:
+	npx esbuild build/bundle.js --outfile=build/bundle.min.js --minify --sourcemap
+
 build:
 	mkdir -p $(OUT_DIR)
 	cp public/* $(OUT_DIR)
 	deno bundle $(CONFIG) src/index.jsx $(BUNDLED)
+	$(MAKE) minify
 
 static: clean build
 	deno run $(CONFIG) --allow-net --allow-read static.ts
