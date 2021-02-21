@@ -2,9 +2,6 @@
  * Server module.
  *
  * Start a dev server for React app. This works independently of an HTML page.
- *
- * Note that this relies on App.jsx and not index.jsx as the entrypoint. The rendering in index.jsx
- * is only needed for static.ts module.
  */
 import { App } from "./src/App.jsx";
 import { React } from "./deps.ts";

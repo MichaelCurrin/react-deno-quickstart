@@ -1,3 +1,6 @@
+/**
+ * App module.
+ */
 import { React } from "../deps.ts";
 
 export function App() {
