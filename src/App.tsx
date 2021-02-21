@@ -3,6 +3,7 @@
  */
 import { React } from "../deps.ts";
 import Counter from "./components/Counter.jsx"
+import "./shim-jsx.ts"
 
 export function App() {
   return <div>
