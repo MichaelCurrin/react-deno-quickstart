@@ -2,7 +2,7 @@
  * App module.
  */
 import { React } from "../deps.ts";
-import Counter from "./components/Counter.jsx"
+import Counter from "./components/Counter.tsx"
 import "./shim-jsx.ts"
 
 export function App() {
