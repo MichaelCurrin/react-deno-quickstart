@@ -6,3 +6,4 @@
 - [Purpose](purpose.md)
 - [Resources](resources.md)
 - [Limitations](limitations.md)
+- [TypeScript JSX](ts-jsx.md)
