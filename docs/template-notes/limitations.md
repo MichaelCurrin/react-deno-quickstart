@@ -47,6 +47,13 @@ Deno doesn't seem to have support for this. Perhaps a package to import CSS as J
 I tried adding a shim so that TypeScript accepts importing a CSS file, but I didn't get far with that.s
 
 
+## Tests
+
+There are no tests in this project.
+
+The usual Node pattern is to have `App.test.js` and some testing libraries like `@testing-library/react`.
+
+
 ## React versions
 
 Normally you'd switch between using production and development versions of React. Where the former is optimized while the latter gives a better developer experience.
