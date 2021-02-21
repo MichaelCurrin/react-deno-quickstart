@@ -22,7 +22,7 @@ app.use((next) =>
   }
 );
 
-console.log("Starting dev server...")
+console.log("Starting dev server...");
 
 app.get("/", App)
   .static("/", "public")
