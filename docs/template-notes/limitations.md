@@ -62,6 +62,11 @@ There are no tests in this project.
 The usual Node pattern is to have `App.test.js` and some testing libraries like `@testing-library/react`.
 
 
+## React imports
+
+Though this app uses React 17. This means the an import from React is **not** needed at the top of each component file. Unfortunately, that benefit does not apply to this Deno project. So the React import must be setup in each.
+
+
 ## React versions
 
 Normally you'd switch between using production and development versions of React. Where the former is optimized while the latter gives a better developer experience.
