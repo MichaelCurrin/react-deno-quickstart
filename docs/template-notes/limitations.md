@@ -79,9 +79,11 @@ This is discussed in [issue #3679](https://github.com/Microsoft/TypeScript/issue
 
 You can setup `declare namespace JSX` to avoid this error.
 
-That is applied in this project - see [shim-jsx.ts](/src/shim-jsx.ts).
+You do have to be **explicit** with the HTML tags you are using. Plus you'll have to add a Deno ignore line for the `any` parts.
 
-You have to be **explicit** with the HTML tags you are going use. Plus you'll have to add a Deno ignore line for the `any` parts.
+This approach is applied in this project - see [shim-jsx.ts](/src/shim-jsx.ts). This is imported in [App.tsx](/src/App.tsx).
+
+This also works a level higher in [server.jsx](/server.jsx) (as `.tsx`), but then boilerplate app setup that was copied to that script needs to be ignored or have types set, so its not worth it. Same for the static module.
 
 #### Alternate naming
 
