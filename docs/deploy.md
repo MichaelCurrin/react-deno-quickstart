@@ -13,21 +13,23 @@ That uses creates a bundled JS file in the `build` directory and minifies it so 
 That also copies static assets from `public`.
 
 
-## Test build
+## Server production build locally
 
-To test the production build locally, run this. This runs the build step for you.
+To test the production build locally, run this.
 
 ```sh
 $ make static
 ```
 
-That uses the Deno package `abc` to serve the `build` directory.
-
-View in the browser:
+Open in the browser on port `80` like this:
 
 - http://localhost
 
-In production, you can use Nginx or a similar tool to serve your build directory. Or use GitHub Pages or Netlify to serve the build directory as static files.
+This runs the `clean` and `build` steps for you and then serve the `build` directory as a static directory [static.ts](/static.ts). This lets us test build output locally for deploying.
+
+In a remote production environment, you should use Nginx or a similar tool to serve your build directory.
+
+Or use GitHub Pages or Netlify to serve the build directory as static files.
 
 
 ## CI flow
