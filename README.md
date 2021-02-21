@@ -8,6 +8,9 @@
 [![Made with Deno](https://img.shields.io/badge/Deno->=1.7-blue?logo=deno&logoColor=white)](https://deno.land)
 [![Made with React](https://img.shields.io/badge/React-17.0.1-blue?logo=react&logoColor=white)](https://www.npmjs.com/package/react)
 
+[![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
+[![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
+
 
 ## Preview
 
