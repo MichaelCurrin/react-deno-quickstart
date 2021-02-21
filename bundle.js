@@ -1695,7 +1695,7 @@ function App() {
         className: "App-header"
     }, __default.createElement("h1", null, "React Deno Quickstart \u269b\ufe0f \u{1f995} \u{1f4e6}"), __default.createElement("h2", null, "Starter for a React app built on Deno - including docs and CI"), __default.createElement(GHBadge, {
         username: "MichaelCurrin",
-        repoName: "react-quickstart"
+        repoName: "deno-react-quickstart"
     })), __default.createElement(Counter, null)));
 }
 var exports3 = {
