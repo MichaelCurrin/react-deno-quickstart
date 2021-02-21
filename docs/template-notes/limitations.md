@@ -75,15 +75,15 @@ TS7026 [ERROR]: JSX element implicitly has type 'any' because no interface 'JSX.
 
 This is discussed in [issue #3679](https://github.com/Microsoft/TypeScript/issues/3679) of the TS repo.
 
-### Namespace
+Another issue is that there are several errors that appear if `server.js` is converted to `server.ts` - around lack of explicit types set on variables and also `React` and `ReactDOMServer` are only known to TS as `{}` so errors appear as functions missing.
+
+### Namespace to support JSX syntax
 
 You can setup `declare namespace JSX` to avoid this error.
 
 You do have to be **explicit** with the HTML tags you are using. Plus you'll have to add a Deno ignore line for the `any` parts.
 
 This approach is applied in this project - see [shim-jsx.ts](/src/shim-jsx.ts). This is imported in [App.tsx](/src/App.tsx).
-
-This also works a level higher in [server.jsx](/server.jsx) (as `.tsx`), but then boilerplate app setup that was copied to that script needs to be ignored or have types set, so its not worth it. Same for the static module.
 
 #### Alternate naming
 
@@ -105,10 +105,8 @@ It seems that only happens if using `.d` in the name.
 
 ### Import React types
 
-Or you can import the React types from a library. The issue above recommends a few options.
+Or you could import types for `React` and `ReactDOOM` from a library. The linked issue above recommends a few options. Sources are like `@types/react` or DefinitelyTyped.
 
-Like `@types/react` or DefinitelyTyped.
+This would solve the issue of JSX syntax and also functions on `React` and `ReactDOM` to be known to TS>
 
-Normally this is added as NPM package for Node project.
-
-I don't know if there is an equivalent way that will work with Deno.
+Normally this is added as NPM package for Node project. I don't know if there is an equivalent way that will work with Deno.
