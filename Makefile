@@ -3,6 +3,7 @@ CONFIG = --config tsconfig.json
 
 OUT_DIR = build
 BUNDLED := $(OUT_DIR)/bundle.js
+MINIFIED := $(OUT_DIR)/bundle.min.js
 
 .PHONY: hooks $(OUT_DIR)
 
@@ -46,7 +47,9 @@ clean:
 	rm -rf $(OUT_DIR)
 
 minify:
-	npx esbuild build/bundle.js --outfile=build/bundle.min.js --minify --sourcemap
+	npx esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap
+	@echo 'Size comparison:'
+	@ls -l -h $(BUNDLED) $(MINIFIED)
 
 build:
 	mkdir -p $(OUT_DIR)
