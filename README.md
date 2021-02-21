@@ -47,7 +47,7 @@ Create a bundled JS file to serve in production.
 $ make build
 ```
 
-The JS file then can be loaded the `index.html`. So you can host your React Deno application as a website anywhere such as on GitHub Pages or Netlify.
+The JS file then can be loaded in the browser using [index.html](/public/index.html). So you can build with Deno and then host your React application as a website anywhere, such as on GitHub Pages or Netlify.
 
 
 ## About this template
