@@ -1688,7 +1688,7 @@ function GHBadge(props) {
 function App() {
     return __default.createElement("div", null, __default.createElement("link", {
         rel: "stylesheet",
-        href: "/styles.css"
+        href: "styles.css"
     }), __default.createElement("div", {
         className: "App"
     }, __default.createElement("header", {
