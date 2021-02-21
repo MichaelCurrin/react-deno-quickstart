@@ -39,7 +39,7 @@ l lint:
 
 
 s serve:
-	deno run $(CONFIG) --allow-net --allow-read --unstable --watch server.jsx
+	deno run $(CONFIG) --allow-net --allow-read --unstable --watch server.js
 
 
 clean:
