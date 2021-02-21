@@ -37,10 +37,10 @@ The JS file then can be loaded the `index.html`. So you can host your React Deno
 
 ## About this template
 
-- Basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
-- Use **React 17+**.
-- Use **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
-- Deploys as a **GitHub Pages** static site using GitHub Actions.
+- Provides a basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
+- Uses **React version 17**.
+- Uses **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
+- Deploys as a **GitHub Pages** static site using GitHub Actions. No manual deploy steps or server management needed.
 
 See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
 
