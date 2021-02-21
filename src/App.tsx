@@ -10,7 +10,7 @@ import GHBadge from "./components/GHBadge.tsx";
 
 export function App() {
   return <div>
-    <link rel="stylesheet" href="/styles.css"></link>
+    <link rel="stylesheet" href="styles.css"></link>
 
     <div className="App">
       <header className="App-header">
