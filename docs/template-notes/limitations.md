@@ -20,15 +20,16 @@ Perhaps `react-scripts` is worth integrating still and will give a better develo
 
 For production app, you'll probably want extend this project.
 
-Use a unique name and minify your bundle.
+Use a unique name in your output file as well as `index.html` file.
 
 Example:
 
 - `bundle-abcdefgh.min.js`.
-- `bundle-v1.2.3.min.js`.
+- `bundle-v1.2.3.min.js`
 
 You might use your app's name in place of the generic "bundle".
 
+For minification, you can replace use of `esbuild` in [Makefile](/Makefile) with another tool that doesn't depend on `npm` / `npx` to run. Such as a Deno package. I tried `minifier` on `Deno.land/x`, but it was not reliable.
 
 ## Styling
 

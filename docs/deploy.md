@@ -4,13 +4,18 @@
 ## Build
 > Create a production build
 
-This uses creates a bundled JS file in the `build` directory and copies static assets from `public`.
-
 ```sh
 $ make build
 ```
 
-To test the production build locally, run this:
+That uses creates a bundled JS file in the `build` directory and minifies it so its about a third of the size.
+
+That also copies static assets from `public`.
+
+
+## Test build
+
+To test the production build locally, run this. This runs the build step for you.
 
 ```sh
 $ make static
@@ -23,15 +28,6 @@ View in the browser:
 - http://localhost
 
 In production, you can use Nginx or a similar tool to serve your build directory. Or use GitHub Pages or Netlify to serve the build directory as static files.
-
-
-## Clean
-
-> Clean the build directory
-
-```sh
-$ make clean
-```
 
 
 ## CI flow
