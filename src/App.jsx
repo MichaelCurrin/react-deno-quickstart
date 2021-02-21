@@ -11,7 +11,7 @@ export function App() {
 
     <a href="https://github.com/MichaelCurrin/react-deno-quickstart">
       <img
-        src="https://img.shields.io/static/v1?label=MichaelCurrin&amp;message=react-deno-quickstart&amp;color=blue&amp;logo=github"
+        src="https://img.shields.io/static/v1?label=MichaelCurrin&message=react-deno-quickstart&color=blue&logo=github"
         alt="MichaelCurrin - react-deno-quickstart"
       />
     </a>
