@@ -9,12 +9,13 @@
 [![Made with React](https://img.shields.io/badge/React-17-blue?logo=react&logoColor=white)](https://www.npmjs.com/package/react)
 
 
-## Overview
+## Preview
 
-- Basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
-- Use **React 17+**.
-- Use **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
-- Deploys as a **GitHub Pages** static site using GitHub Actions.
+<div align="center">
+    <a href="https://michaelcurrin.github.io/react-deno-quickstart/">
+        <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="400" />
+    </a>
+</div>
 
 
 ## Sample usage
@@ -35,6 +36,11 @@ The JS file then can be loaded the `index.html`. So you can host your React Deno
 
 
 ## About this template
+
+- Basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
+- Use **React 17+**.
+- Use **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
+- Deploys as a **GitHub Pages** static site using GitHub Actions.
 
 See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
 
