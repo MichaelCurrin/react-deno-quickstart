@@ -5,8 +5,16 @@
 [![GitHub tag](https://img.shields.io/github/tag/MichaelCurrin/react-deno-quickstart?include_prereleases=&sort=semver)](https://github.com/MichaelCurrin/react-deno-quickstart/releases/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
-[![Made with Deno](https://img.shields.io/badge/Deno-1.x-blue?logo=deno&logoColor=white)](https://deno.land)
+[![Made with Deno](https://img.shields.io/badge/Deno->=1.7-blue?logo=deno&logoColor=white)](https://deno.land)
 [![Made with React](https://img.shields.io/badge/React-17-blue?logo=react&logoColor=white)](https://www.npmjs.com/package/react)
+
+
+## Overview
+
+- Basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
+- Use **React 17+**.
+- Use **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
+- Deploys as a **GitHub Pages** static site using GitHub Actions.
 
 
 ## Sample usage
