@@ -59,3 +59,54 @@ The usual Node pattern is to have `App.test.js` and some testing libraries like 
 Normally you'd switch between using production and development versions of React. Where the former is optimized while the latter gives a better developer experience.
 
 This project covers only using the production React.
+
+
+## TypeScript support
+
+Deno supports `.ts` for TS and `.jsx` for your React files with JSX syntax.
+
+It also supports, `.tsx`, which means TS checks get applied. But, Deno will complain.
+
+```
+TS7026 [ERROR]: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+      <p>You clicked {count} times</p>
+      ~~~
+```
+
+This is discussed in [issue #3679](https://github.com/Microsoft/TypeScript/issues/3679) of the TS repo.
+
+### Namespace
+
+You can setup `declare namespace JSX` to avoid this error.
+
+That is applied in this project - see [shim-jsx.ts](/src/shim-jsx.ts).
+
+You have to be **explicit** with the HTML tags you are going use. Plus you'll have to add a Deno ignore line for the `any` parts.
+
+#### Alternate naming
+
+I used the name `shim-jsx.ts` to match what is recommended for adding TS support to a Vue project.
+
+I tried setting this up before as `types.d.ts` and used as:
+
+```typescript
+import "./types.d.ts";
+```
+
+But then got this compiler warning:
+
+```
+    If the source module contains only types, use `import type` and `export type` to import it instead.
+```
+
+It seems that only happens if using `.d` in the name.
+
+### Import React types
+
+Or you can import the React types from a library. The issue above recommends a few options.
+
+Like `@types/react` or DefinitelyTyped.
+
+Normally this is added as NPM package for Node project.
+
+I don't know if there is an equivalent way that will work with Deno.
