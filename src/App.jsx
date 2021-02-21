@@ -2,6 +2,7 @@
  * App module.
  */
 import { React } from "../deps.ts";
+import Counter from "./components/Counter.jsx"
 
 export function App() {
   return <div>
@@ -17,5 +18,7 @@ export function App() {
     </a>
 
     <h2>Hello, World!</h2>
+
+    <Counter></Counter>
   </div>;
 }
