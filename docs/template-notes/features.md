@@ -9,7 +9,7 @@
 - Task running through Deno and `make`.
     - See [Makefile](/Makefile) or run `make help` for commands.
     - This flow replaces using `package.json` and `npm/yarn run`.
-    - Light on configuration files and dependencies - No need to install ESLint, a test runner or TypeScript. These are all built into Deno.
+    - Light on configuration files and dependencies. No need to install ESLint, a test runner or TypeScript. These are all built into Deno. Deno also handles `.jsx` files out the box.
 - Documentation is included - see [docs/](/docs/).
 - GitHub Actions CI is included.
     - See the workflow in [.github/](/.github/).
