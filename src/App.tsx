@@ -18,7 +18,7 @@ export function App() {
 
         <h2>Starter for a React app built on Deno - including docs and CI</h2>
 
-        <GHBadge username="MichaelCurrin" repoName="react-quickstart" />
+        <GHBadge username="MichaelCurrin" repoName="deno-react-quickstart" />
       </header>
 
       <Counter></Counter>
