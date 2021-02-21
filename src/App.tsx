@@ -1,9 +1,12 @@
 /**
  * App module.
+ *
+ * Note - shim must come before components so it can be applied there.
  */
 import { React } from "../deps.ts";
-import Counter from "./components/Counter.tsx";
 import "./shim-jsx.ts";
+import Counter from "./components/Counter.tsx";
+import GHBadge from "./components/GHBadge.tsx";
 
 export function App() {
   return <div>
@@ -15,12 +18,7 @@ export function App() {
 
         <h2>Starter for a React app built on Deno - including docs and CI</h2>
 
-        <a href="https://github.com/MichaelCurrin/react-deno-quickstart">
-          <img
-            src="https://img.shields.io/static/v1?label=MichaelCurrin&message=react-deno-quickstart&color=blue&logo=github"
-            alt="MichaelCurrin - react-deno-quickstart"
-          />
-        </a>
+        <GHBadge username="MichaelCurrin" repoName="react-quickstart" />
       </header>
 
       <Counter></Counter>
