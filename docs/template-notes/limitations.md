@@ -31,6 +31,7 @@ You might use your app's name in place of the generic "bundle".
 
 For minification, you can replace use of `esbuild` in [Makefile](/Makefile) with another tool that doesn't depend on `npm` / `npx` to run. Such as a Deno package. I tried `minifier` on `Deno.land/x`, but it was not reliable.
 
+
 ## Styling
 
 This project takes the simple approach of having one CSS file and adding it to the start of the React app.
@@ -93,9 +94,7 @@ Another issue is that there are several errors that appear if `server.js` is con
 
 ### Namespace to support JSX syntax
 
-You can setup `declare namespace JSX` to avoid this error.
-
-You do have to be **explicit** with the HTML tags you are using. Plus you'll have to add a Deno ignore line for the `any` parts.
+You can setup `InstrinsicElements` and `declare namespace JSX` to avoid this error. See [InstrinsicElements](https://www.typescriptlang.org/docs/handbook/jsx.html#intrinsic-elements) in the TS docs around JSX.
 
 This approach is applied in this project - see [shim-jsx.ts](/src/shim-jsx.ts). This is imported in [App.tsx](/src/App.tsx).
 
