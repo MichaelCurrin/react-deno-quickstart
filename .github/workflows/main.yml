@@ -2,11 +2,15 @@ name: Deno CI
 
 on:
   push:
-    branches:
-      - main
+    branches: main
+    paths-ignore:
+      - "docs/**"
+      - README.md
   pull_request:
-    branches:
-      - main
+    branches: main
+    paths-ignore:
+      - "docs/**"
+      - README.md
 
 jobs:
   test-build:
@@ -15,8 +19,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
 
       - name: Setup Deno ⚙️ 🦕
         uses: denolib/setup-deno@v2
