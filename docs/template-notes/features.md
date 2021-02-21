@@ -3,8 +3,14 @@
 
 
 - Outline of a basic React built with React.
-- Start a dev server
-- Create a production build.
-- Uses `make` as an easy Deno task runner - see [Makefile](/Makefile) or run `make help`.
+- Two modes for running your React app.
+    - Start a dev server.
+    - Create a production build - then serve it a locally or on your production server.
+- Task running through Deno and `make`.
+    - See [Makefile](/Makefile) or run `make help` for commands.
+    - This flow replaces using `package.json` and `npm/yarn run`.
+    - No need to install ESLint, a test runner or TypeScript - these are all built into Deno.
 - Documentation is included - see [docs/](/docs/).
-- GitHub Actions CI is included - see workflow in [.github/](/.github/).
+- GitHub Actions CI is included.
+    - See the workflow in [.github/](/.github/).
+    - This builds the app and deploys static assets for serving your React Single-Page Application.

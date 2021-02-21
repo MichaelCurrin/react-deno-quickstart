@@ -1,9 +1,25 @@
 # Limitations
 
 
-## Optimization
+## Tasks
 
-In production, you'd probably want to use a minification tool to minify your JS bundle. Deno and Node do not have anything built-in to support this but you can find package to do this.
+This project does not use `react-scripts` to start the React application and rather uses Deno packages to handle the serving.
+
+Perhaps `react-scripts` is worth integrating still and will give a better developer experience. Like performing linting and recommendations as part of `react-scripts start` when running `npm/yarn start`.
+
+
+## Optimizing production builds
+
+For production app, you'll probably want extend this project.
+
+Use a unique name and minify your bundle.
+
+Example:
+
+- `bundle-abcdefgh.min.js`.
+- `bundle-v1.2.3.min.js`.
+
+You might use your app's name in place of the generic "bundle".
 
 
 ## Styling
