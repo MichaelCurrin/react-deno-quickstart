@@ -6,15 +6,27 @@
 [![License](https://img.shields.io/badge/License-MIT-blue)](#license)
 
 [![Made with Deno](https://img.shields.io/badge/Deno->=1.7-blue?logo=deno&logoColor=white)](https://deno.land)
-[![Made with React](https://img.shields.io/badge/React-17-blue?logo=react&logoColor=white)](https://www.npmjs.com/package/react)
+[![Made with React](https://img.shields.io/badge/React-17.0.1-blue?logo=react&logoColor=white)](https://www.npmjs.com/package/react)
 
 
 ## Preview
+
+This template project uses **Deno** to build a **React** app (no Node.js here). The app gets deployed using GH Actions and then served as a GitHub Pages site.
+
+This is what the demo site looks like:
 
 <div align="center">
     <a href="https://michaelcurrin.github.io/react-deno-quickstart/">
         <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="400" />
     </a>
+</div>
+
+<br>
+
+<div align="center">
+
+[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/react-deno-quickstart/)
+
 </div>
 
 
@@ -37,6 +49,8 @@ The JS file then can be loaded the `index.html`. So you can host your React Deno
 
 ## About this template
 
+### Overview
+
 - Provides a basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
 - Uses **React version 17**.
 - Uses **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
@@ -44,8 +58,7 @@ The JS file then can be loaded the `index.html`. So you can host your React Deno
 
 See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
 
-
-## Start building with React and Deno
+### Start building with React and Deno
 
 <div align="center">
 
