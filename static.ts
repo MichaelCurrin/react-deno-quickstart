@@ -11,6 +11,8 @@ const APP_PORT = 80;
 
 const app = new Application();
 
+console.log("Starting static server...")
+
 app.file("/", "build/index.html")
   .static("/", "build")
   .start({ port: APP_PORT });

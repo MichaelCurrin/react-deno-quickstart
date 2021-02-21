@@ -22,6 +22,8 @@ app.use((next) =>
   }
 );
 
+console.log("Starting dev server...")
+
 app.get("/", App)
   .static("/", "public")
   .start({ port: APP_PORT });
