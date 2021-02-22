@@ -11,6 +11,17 @@
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
+<div align="center">
+    <img src="https://raw.githubusercontent.com/github/explore/master/topics/react/react.png"
+         alt="node icon"
+         title="Node.js"
+         width="150" height="150" />
+    <img src="https://raw.githubusercontent.com/github/explore/master/topics/deno/deno.png"
+         alt="node icon"
+         title="Node.js"
+        width="150" height="150" />
+</div>
+
 
 ## Preview
 
@@ -41,13 +52,13 @@ Start a dev server:
 $ make serve
 ```
 
-Create a bundled JS file to serve in production.
+Create a bundled JS file of all your app code and depenendencies.
 
 ```sh
 $ make build
 ```
 
-The JS file then can be loaded in the browser using [index.html](/public/index.html). So you can build with Deno and then host your React application as a website anywhere, such as on GitHub Pages or Netlify.
+The output JS file then can be loaded in the browser using [index.html](/public/index.html). Which means you can host your rendered React application as SPA web app anywhere, such as on GitHub Pages (like this project) or Netlify.
 
 
 ## About this template
