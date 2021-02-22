@@ -77,7 +77,7 @@ See the [Template notes](/docs/template-notes/) section of the docs for help on 
 
 Start building with React and Deno:
 
-[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
+- [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
 Want to stick to Node.js or compare how this React/Deno app looks compared to React/Node app? See my Node-based template:
 
