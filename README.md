@@ -79,6 +79,10 @@ Start building with React and Deno:
 
 [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
+Want to stick to Node.js or compare how this React/Deno app looks compared to React/Node app? See my Node-based template:
+
+- [![MichaelCurrin - react-quickstart](https://img.shields.io/static/v1?label=MichaelCurrin&message=react-quickstart&color=blue&logo=github)](https://github.com/MichaelCurrin/react-quickstart)
+
 
 ## Documentation
 
