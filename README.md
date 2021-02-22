@@ -11,6 +11,7 @@
 [![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://pages.github.com/)
 [![Made with GH Actions](https://img.shields.io/badge/CI-GitHub_Actions-blue?logo=github-actions&logoColor=white)](https://github.com/features/actions)
 
+
 <div align="center">
     <img src="https://raw.githubusercontent.com/github/explore/master/topics/react/react.png"
          alt="node icon"
@@ -39,7 +40,9 @@ This is what the demo site looks like:
 
 <div align="center">
 
-[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://michaelcurrin.github.io/react-deno-quickstart/)
+[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-blue?style=for-the-badge)](https://michaelcurrin.github.io/react-deno-quickstart/)
+
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
 </div>
 
@@ -72,13 +75,7 @@ The output JS file then can be loaded in the browser using [index.html](/public/
 
 See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
 
-### Start building with React and Deno
-
-<div align="center">
-
-[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
-
-</div>
+Start building with React and Deno - [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate).
 
 
 ## Documentation
