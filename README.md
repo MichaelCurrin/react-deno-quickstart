@@ -75,7 +75,9 @@ The output JS file then can be loaded in the browser using [index.html](/public/
 
 See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
 
-Start building with React and Deno - [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate).
+Start building with React and Deno:
+
+[![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
 
 ## Documentation
