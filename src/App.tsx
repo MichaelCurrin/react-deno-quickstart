@@ -23,7 +23,7 @@ export function App() {
         <GHBadge username="MichaelCurrin" repoName="react-deno-quickstart" />
       </header>
 
-      <Counter/>
+      <Counter />
     </div>
   </div>;
 }
