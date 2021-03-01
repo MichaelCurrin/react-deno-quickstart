@@ -47,7 +47,8 @@ clean:
 	rm -rf $(OUT_DIR)
 
 minify:
-	npx esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap
+	npx esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap \
+		--define:'process.env.NODE_ENV="production"'
 	@echo 'Size comparison:'
 	@ls -l -h $(BUNDLED) $(MINIFIED)
 
