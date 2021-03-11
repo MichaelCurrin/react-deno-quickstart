@@ -24,6 +24,13 @@
 </div>
 
 
+## Disclaimer
+
+This project's works well to build a bundled React app for static serving.
+
+There is just a bug on the dev server where the app is frozen. There is an [issue](https://github.com/MichaelCurrin/react-deno-quickstart/issues/1) for this.
+
+
 ## Preview
 
 This template project uses **Deno** to build a **React** app (no Node.js here). The app gets deployed using GH Actions and then served as a GitHub Pages site.
