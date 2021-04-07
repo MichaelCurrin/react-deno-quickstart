@@ -16,9 +16,9 @@ export function App() {
       <header className="App-header">
         <h1>React Deno Quickstart ⚛️ 🦕 📦</h1>
 
-        <h2>
+        <p>
           Starter template for a React app built on Deno - including docs and CI
-        </h2>
+        </p>
 
         <GHBadge username="MichaelCurrin" repoName="react-deno-quickstart" />
       </header>
