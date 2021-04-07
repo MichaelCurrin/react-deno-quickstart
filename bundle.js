@@ -71,16 +71,15 @@ function dew() {
     };
     return exports;
 }
-const dew1 = dew;
 var exports1 = {
 }, _dewExec1 = false;
-function dew2() {
+function dew1() {
     if (_dewExec1) return exports1;
     _dewExec1 = true;
     {
         (function() {
             'use strict';
-            var _assign = dew1();
+            var _assign = dew();
             var ReactVersion = '17.0.1';
             var REACT_ELEMENT_TYPE = 60103;
             var REACT_PORTAL_TYPE = 60106;
@@ -1655,61 +1654,27 @@ function dew2() {
     }
     return exports1;
 }
-const _reactDevelopmentDewDew = dew2;
 var exports2 = {
 }, _dewExec2 = false;
-function dew3() {
+function dew2() {
     if (_dewExec2) return exports2;
     _dewExec2 = true;
     {
-        exports2 = _reactDevelopmentDewDew();
+        exports2 = dew1();
     }
     return exports2;
 }
-const __default = dew3();
-function Counter() {
-    const [count, setCount] = __default.useState(0);
-    return __default.createElement("div", null, __default.createElement("p", null, "You clicked ", count, " times"), __default.createElement("button", {
-        onClick: ()=>setCount(count + 1)
-    }, "Click me"));
-}
-function GHBadge(props) {
-    const { username , repoName  } = props;
-    const repoUrl = `https://github.com/${username}/${repoName}`;
-    const badgeUrl = `https://img.shields.io/static/v1?label=${username}&message=${repoName}&color=blue&logo=github`;
-    const altText = `${username} - ${repoName}`;
-    return __default.createElement("a", {
-        href: repoUrl
-    }, __default.createElement("img", {
-        src: badgeUrl,
-        alt: altText
-    }));
-}
-function App() {
-    return __default.createElement("div", null, __default.createElement("link", {
-        rel: "stylesheet",
-        href: "styles.css"
-    }), __default.createElement("div", {
-        className: "App"
-    }, __default.createElement("header", {
-        className: "App-header"
-    }, __default.createElement("h1", null, "React Deno Quickstart \u269b\ufe0f \u{1f995} \u{1f4e6}"), __default.createElement("h2", null, "Starter template for a React app built on Deno - including docs and CI"), __default.createElement(GHBadge, {
-        username: "MichaelCurrin",
-        repoName: "react-deno-quickstart"
-    })), __default.createElement(Counter, null)));
-}
+const __default = dew2();
 var exports3 = {
 }, _dewExec3 = false;
-var exports4 = {
-}, _dewExec4 = false;
-function dew4() {
-    if (_dewExec4) return exports4;
-    _dewExec4 = true;
+function dew3() {
+    if (_dewExec3) return exports3;
+    _dewExec3 = true;
     {
         (function() {
             'use strict';
             var enableSchedulerDebugging = false;
-            var enableProfiling = true;
+            var enableProfiling = false;
             var requestHostCallback;
             var requestHostTimeout;
             var cancelHostTimeout;
@@ -1717,13 +1682,13 @@ function dew4() {
             var hasPerformanceNow = typeof performance === 'object' && typeof performance.now === 'function';
             if (hasPerformanceNow) {
                 var localPerformance = performance;
-                exports4.unstable_now = function() {
+                exports3.unstable_now = function() {
                     return localPerformance.now();
                 };
             } else {
                 var localDate = Date;
                 var initialTime = localDate.now();
-                exports4.unstable_now = function() {
+                exports3.unstable_now = function() {
                     return localDate.now() - initialTime;
                 };
             }
@@ -1733,7 +1698,7 @@ function dew4() {
                 var _flushCallback = function() {
                     if (_callback !== null) {
                         try {
-                            var currentTime = exports4.unstable_now();
+                            var currentTime = exports3.unstable_now();
                             var hasRemainingTime = true;
                             _callback(hasRemainingTime, currentTime);
                             _callback = null;
@@ -1757,10 +1722,10 @@ function dew4() {
                 cancelHostTimeout = function() {
                     clearTimeout(_timeoutID);
                 };
-                exports4.unstable_shouldYield = function() {
+                exports3.unstable_shouldYield = function() {
                     return false;
                 };
-                requestPaint = exports4.unstable_forceFrameRate = function() {
+                requestPaint = exports3.unstable_forceFrameRate = function() {
                 };
             } else {
                 var _setTimeout = window.setTimeout;
@@ -1781,13 +1746,13 @@ function dew4() {
                 var yieldInterval = 5;
                 var deadline = 0;
                 {
-                    exports4.unstable_shouldYield = function() {
-                        return exports4.unstable_now() >= deadline;
+                    exports3.unstable_shouldYield = function() {
+                        return exports3.unstable_now() >= deadline;
                     };
                     requestPaint = function() {
                     };
                 }
-                exports4.unstable_forceFrameRate = function(fps) {
+                exports3.unstable_forceFrameRate = function(fps) {
                     if (fps < 0 || fps > 125) {
                         console['error']('forceFrameRate takes a positive int between 0 and 125, ' + 'forcing frame rates higher than 125 fps is not supported');
                         return;
@@ -1800,7 +1765,7 @@ function dew4() {
                 };
                 var performWorkUntilDeadline = function() {
                     if (scheduledHostCallback !== null) {
-                        var currentTime = exports4.unstable_now();
+                        var currentTime = exports3.unstable_now();
                         deadline = currentTime + yieldInterval;
                         var hasTimeRemaining = true;
                         try {
@@ -1831,7 +1796,7 @@ function dew4() {
                 };
                 requestHostTimeout = function(callback, ms) {
                     taskTimeoutID = _setTimeout(function() {
-                        callback(exports4.unstable_now());
+                        callback(exports3.unstable_now());
                     }, ms);
                 };
                 cancelHostTimeout = function() {
@@ -1906,179 +1871,12 @@ function dew4() {
                 var diff = a.sortIndex - b.sortIndex;
                 return diff !== 0 ? diff : a.id - b.id;
             }
-            var NoPriority = 0;
             var ImmediatePriority = 1;
             var UserBlockingPriority = 2;
             var NormalPriority = 3;
             var LowPriority = 4;
             var IdlePriority = 5;
-            var runIdCounter = 0;
-            var mainThreadIdCounter = 0;
-            var profilingStateSize = 4;
-            var sharedProfilingBuffer = typeof SharedArrayBuffer === 'function' ? new SharedArrayBuffer(profilingStateSize * Int32Array.BYTES_PER_ELEMENT) : typeof ArrayBuffer === 'function' ? new ArrayBuffer(profilingStateSize * Int32Array.BYTES_PER_ELEMENT) : null;
-            var profilingState = sharedProfilingBuffer !== null ? new Int32Array(sharedProfilingBuffer) : [];
-            var PRIORITY = 0;
-            var CURRENT_TASK_ID = 1;
-            var CURRENT_RUN_ID = 2;
-            var QUEUE_SIZE = 3;
-            {
-                profilingState[PRIORITY] = NoPriority;
-                profilingState[QUEUE_SIZE] = 0;
-                profilingState[CURRENT_TASK_ID] = 0;
-            }
-            var INITIAL_EVENT_LOG_SIZE = 131072;
-            var MAX_EVENT_LOG_SIZE = 524288;
-            var eventLogSize = 0;
-            var eventLogBuffer = null;
-            var eventLog = null;
-            var eventLogIndex = 0;
-            var TaskStartEvent = 1;
-            var TaskCompleteEvent = 2;
-            var TaskErrorEvent = 3;
-            var TaskCancelEvent = 4;
-            var TaskRunEvent = 5;
-            var TaskYieldEvent = 6;
-            var SchedulerSuspendEvent = 7;
-            var SchedulerResumeEvent = 8;
-            function logEvent(entries) {
-                if (eventLog !== null) {
-                    var offset = eventLogIndex;
-                    eventLogIndex += entries.length;
-                    if (eventLogIndex + 1 > eventLogSize) {
-                        eventLogSize *= 2;
-                        if (eventLogSize > MAX_EVENT_LOG_SIZE) {
-                            console['error']("Scheduler Profiling: Event log exceeded maximum size. Don't " + 'forget to call `stopLoggingProfilingEvents()`.');
-                            stopLoggingProfilingEvents();
-                            return;
-                        }
-                        var newEventLog = new Int32Array(eventLogSize * 4);
-                        newEventLog.set(eventLog);
-                        eventLogBuffer = newEventLog.buffer;
-                        eventLog = newEventLog;
-                    }
-                    eventLog.set(entries, offset);
-                }
-            }
-            function startLoggingProfilingEvents() {
-                eventLogSize = INITIAL_EVENT_LOG_SIZE;
-                eventLogBuffer = new ArrayBuffer(eventLogSize * 4);
-                eventLog = new Int32Array(eventLogBuffer);
-                eventLogIndex = 0;
-            }
-            function stopLoggingProfilingEvents() {
-                var buffer = eventLogBuffer;
-                eventLogSize = 0;
-                eventLogBuffer = null;
-                eventLog = null;
-                eventLogIndex = 0;
-                return buffer;
-            }
-            function markTaskStart(task, ms) {
-                {
-                    profilingState[QUEUE_SIZE]++;
-                    if (eventLog !== null) {
-                        logEvent([
-                            TaskStartEvent,
-                            ms * 1000,
-                            task.id,
-                            task.priorityLevel
-                        ]);
-                    }
-                }
-            }
-            function markTaskCompleted(task, ms) {
-                {
-                    profilingState[PRIORITY] = NoPriority;
-                    profilingState[CURRENT_TASK_ID] = 0;
-                    profilingState[QUEUE_SIZE]--;
-                    if (eventLog !== null) {
-                        logEvent([
-                            TaskCompleteEvent,
-                            ms * 1000,
-                            task.id
-                        ]);
-                    }
-                }
-            }
-            function markTaskCanceled(task, ms) {
-                {
-                    profilingState[QUEUE_SIZE]--;
-                    if (eventLog !== null) {
-                        logEvent([
-                            TaskCancelEvent,
-                            ms * 1000,
-                            task.id
-                        ]);
-                    }
-                }
-            }
             function markTaskErrored(task, ms) {
-                {
-                    profilingState[PRIORITY] = NoPriority;
-                    profilingState[CURRENT_TASK_ID] = 0;
-                    profilingState[QUEUE_SIZE]--;
-                    if (eventLog !== null) {
-                        logEvent([
-                            TaskErrorEvent,
-                            ms * 1000,
-                            task.id
-                        ]);
-                    }
-                }
-            }
-            function markTaskRun(task, ms) {
-                {
-                    runIdCounter++;
-                    profilingState[PRIORITY] = task.priorityLevel;
-                    profilingState[CURRENT_TASK_ID] = task.id;
-                    profilingState[CURRENT_RUN_ID] = runIdCounter;
-                    if (eventLog !== null) {
-                        logEvent([
-                            TaskRunEvent,
-                            ms * 1000,
-                            task.id,
-                            runIdCounter
-                        ]);
-                    }
-                }
-            }
-            function markTaskYield(task, ms) {
-                {
-                    profilingState[PRIORITY] = NoPriority;
-                    profilingState[CURRENT_TASK_ID] = 0;
-                    profilingState[CURRENT_RUN_ID] = 0;
-                    if (eventLog !== null) {
-                        logEvent([
-                            TaskYieldEvent,
-                            ms * 1000,
-                            task.id,
-                            runIdCounter
-                        ]);
-                    }
-                }
-            }
-            function markSchedulerSuspended(ms) {
-                {
-                    mainThreadIdCounter++;
-                    if (eventLog !== null) {
-                        logEvent([
-                            SchedulerSuspendEvent,
-                            ms * 1000,
-                            mainThreadIdCounter
-                        ]);
-                    }
-                }
-            }
-            function markSchedulerUnsuspended(ms) {
-                {
-                    if (eventLog !== null) {
-                        logEvent([
-                            SchedulerResumeEvent,
-                            ms * 1000,
-                            mainThreadIdCounter
-                        ]);
-                    }
-                }
             }
             var maxSigned31BitInt = 1073741823;
             var IMMEDIATE_PRIORITY_TIMEOUT = -1;
@@ -2103,10 +1901,6 @@ function dew4() {
                         pop(timerQueue);
                         timer.sortIndex = timer.expirationTime;
                         push(taskQueue, timer);
-                        {
-                            markTaskStart(timer, currentTime);
-                            timer.isQueued = true;
-                        }
                     } else {
                         return;
                     }
@@ -2129,9 +1923,6 @@ function dew4() {
                 }
             }
             function flushWork(hasTimeRemaining, initialTime) {
-                {
-                    markSchedulerUnsuspended(initialTime);
-                }
                 isHostCallbackScheduled = false;
                 if (isHostTimeoutScheduled) {
                     isHostTimeoutScheduled = false;
@@ -2145,7 +1936,7 @@ function dew4() {
                             return workLoop(hasTimeRemaining, initialTime);
                         } catch (error) {
                             if (currentTask !== null) {
-                                var currentTime = exports4.unstable_now();
+                                var currentTime = exports3.unstable_now();
                                 markTaskErrored(currentTask, currentTime);
                                 currentTask.isQueued = false;
                             }
@@ -2158,10 +1949,6 @@ function dew4() {
                     currentTask = null;
                     currentPriorityLevel = previousPriorityLevel;
                     isPerformingWork = false;
-                    {
-                        var _currentTime = exports4.unstable_now();
-                        markSchedulerSuspended(_currentTime);
-                    }
                 }
             }
             function workLoop(hasTimeRemaining, initialTime) {
@@ -2169,7 +1956,7 @@ function dew4() {
                 advanceTimers(currentTime);
                 currentTask = peek(taskQueue);
                 while(currentTask !== null && !enableSchedulerDebugging){
-                    if (currentTask.expirationTime > currentTime && (!hasTimeRemaining || exports4.unstable_shouldYield())) {
+                    if (currentTask.expirationTime > currentTime && (!hasTimeRemaining || exports3.unstable_shouldYield())) {
                         break;
                     }
                     var callback = currentTask.callback;
@@ -2177,17 +1964,11 @@ function dew4() {
                         currentTask.callback = null;
                         currentPriorityLevel = currentTask.priorityLevel;
                         var didUserCallbackTimeout = currentTask.expirationTime <= currentTime;
-                        markTaskRun(currentTask, currentTime);
                         var continuationCallback = callback(didUserCallbackTimeout);
-                        currentTime = exports4.unstable_now();
+                        currentTime = exports3.unstable_now();
                         if (typeof continuationCallback === 'function') {
                             currentTask.callback = continuationCallback;
-                            markTaskYield(currentTask, currentTime);
                         } else {
-                            {
-                                markTaskCompleted(currentTask, currentTime);
-                                currentTask.isQueued = false;
-                            }
                             if (currentTask === peek(taskQueue)) {
                                 pop(taskQueue);
                             }
@@ -2259,7 +2040,7 @@ function dew4() {
                 };
             }
             function unstable_scheduleCallback(priorityLevel, callback, options) {
-                var currentTime = exports4.unstable_now();
+                var currentTime = exports3.unstable_now();
                 var startTime;
                 if (typeof options === 'object' && options !== null) {
                     var delay = options.delay;
@@ -2299,9 +2080,6 @@ function dew4() {
                     expirationTime: expirationTime,
                     sortIndex: -1
                 };
-                {
-                    newTask.isQueued = false;
-                }
                 if (startTime > currentTime) {
                     newTask.sortIndex = startTime;
                     push(timerQueue, newTask);
@@ -2316,10 +2094,6 @@ function dew4() {
                 } else {
                     newTask.sortIndex = expirationTime;
                     push(taskQueue, newTask);
-                    {
-                        markTaskStart(newTask, currentTime);
-                        newTask.isQueued = true;
-                    }
                     if (!isHostCallbackScheduled && !isPerformingWork) {
                         isHostCallbackScheduled = true;
                         requestHostCallback(flushWork);
@@ -2339,89 +2113,76 @@ function dew4() {
                 return peek(taskQueue);
             }
             function unstable_cancelCallback(task) {
-                {
-                    if (task.isQueued) {
-                        var currentTime = exports4.unstable_now();
-                        markTaskCanceled(task, currentTime);
-                        task.isQueued = false;
-                    }
-                }
                 task.callback = null;
             }
             function unstable_getCurrentPriorityLevel() {
                 return currentPriorityLevel;
             }
             var unstable_requestPaint = requestPaint;
-            var unstable_Profiling = {
-                startLoggingProfilingEvents: startLoggingProfilingEvents,
-                stopLoggingProfilingEvents: stopLoggingProfilingEvents,
-                sharedProfilingBuffer: sharedProfilingBuffer
-            };
-            exports4.unstable_IdlePriority = IdlePriority;
-            exports4.unstable_ImmediatePriority = ImmediatePriority;
-            exports4.unstable_LowPriority = LowPriority;
-            exports4.unstable_NormalPriority = NormalPriority;
-            exports4.unstable_Profiling = unstable_Profiling;
-            exports4.unstable_UserBlockingPriority = UserBlockingPriority;
-            exports4.unstable_cancelCallback = unstable_cancelCallback;
-            exports4.unstable_continueExecution = unstable_continueExecution;
-            exports4.unstable_getCurrentPriorityLevel = unstable_getCurrentPriorityLevel;
-            exports4.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
-            exports4.unstable_next = unstable_next;
-            exports4.unstable_pauseExecution = unstable_pauseExecution;
-            exports4.unstable_requestPaint = unstable_requestPaint;
-            exports4.unstable_runWithPriority = unstable_runWithPriority;
-            exports4.unstable_scheduleCallback = unstable_scheduleCallback;
-            exports4.unstable_wrapCallback = unstable_wrapCallback;
+            var unstable_Profiling = null;
+            exports3.unstable_IdlePriority = IdlePriority;
+            exports3.unstable_ImmediatePriority = ImmediatePriority;
+            exports3.unstable_LowPriority = LowPriority;
+            exports3.unstable_NormalPriority = NormalPriority;
+            exports3.unstable_Profiling = unstable_Profiling;
+            exports3.unstable_UserBlockingPriority = UserBlockingPriority;
+            exports3.unstable_cancelCallback = unstable_cancelCallback;
+            exports3.unstable_continueExecution = unstable_continueExecution;
+            exports3.unstable_getCurrentPriorityLevel = unstable_getCurrentPriorityLevel;
+            exports3.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
+            exports3.unstable_next = unstable_next;
+            exports3.unstable_pauseExecution = unstable_pauseExecution;
+            exports3.unstable_requestPaint = unstable_requestPaint;
+            exports3.unstable_runWithPriority = unstable_runWithPriority;
+            exports3.unstable_scheduleCallback = unstable_scheduleCallback;
+            exports3.unstable_wrapCallback = unstable_wrapCallback;
         })();
+    }
+    return exports3;
+}
+var exports4 = {
+}, _dewExec4 = false;
+function dew4() {
+    if (_dewExec4) return exports4;
+    _dewExec4 = true;
+    {
+        exports4 = dew3();
     }
     return exports4;
 }
-const _schedulerDevelopmentDewDew = dew4;
 var exports5 = {
 }, _dewExec5 = false;
 function dew5() {
     if (_dewExec5) return exports5;
     _dewExec5 = true;
     {
-        exports5 = _schedulerDevelopmentDewDew();
-    }
-    return exports5;
-}
-const dew6 = dew5;
-var exports6 = {
-}, _dewExec6 = false;
-function dew7() {
-    if (_dewExec6) return exports6;
-    _dewExec6 = true;
-    {
         (function() {
             'use strict';
             var DEFAULT_THREAD_ID = 0;
             var interactionIDCounter = 0;
             var threadIDCounter = 0;
-            exports6.__interactionsRef = null;
-            exports6.__subscriberRef = null;
+            exports5.__interactionsRef = null;
+            exports5.__subscriberRef = null;
             {
-                exports6.__interactionsRef = {
+                exports5.__interactionsRef = {
                     current: new Set()
                 };
-                exports6.__subscriberRef = {
+                exports5.__subscriberRef = {
                     current: null
                 };
             }
             function unstable_clear(callback) {
-                var prevInteractions = exports6.__interactionsRef.current;
-                exports6.__interactionsRef.current = new Set();
+                var prevInteractions = exports5.__interactionsRef.current;
+                exports5.__interactionsRef.current = new Set();
                 try {
                     return callback();
                 } finally{
-                    exports6.__interactionsRef.current = prevInteractions;
+                    exports5.__interactionsRef.current = prevInteractions;
                 }
             }
             function unstable_getCurrent() {
                 {
-                    return exports6.__interactionsRef.current;
+                    return exports5.__interactionsRef.current;
                 }
             }
             function unstable_getThreadID() {
@@ -2435,11 +2196,11 @@ function dew7() {
                     name: name,
                     timestamp: timestamp
                 };
-                var prevInteractions = exports6.__interactionsRef.current;
+                var prevInteractions = exports5.__interactionsRef.current;
                 var interactions = new Set(prevInteractions);
                 interactions.add(interaction);
-                exports6.__interactionsRef.current = interactions;
-                var subscriber = exports6.__subscriberRef.current;
+                exports5.__interactionsRef.current = interactions;
+                var subscriber = exports5.__subscriberRef.current;
                 var returnValue;
                 try {
                     if (subscriber !== null) {
@@ -2454,7 +2215,7 @@ function dew7() {
                         try {
                             returnValue = callback();
                         } finally{
-                            exports6.__interactionsRef.current = prevInteractions;
+                            exports5.__interactionsRef.current = prevInteractions;
                             try {
                                 if (subscriber !== null) {
                                     subscriber.onWorkStopped(interactions, threadID);
@@ -2472,8 +2233,8 @@ function dew7() {
             }
             function unstable_wrap(callback) {
                 var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREAD_ID;
-                var wrappedInteractions = exports6.__interactionsRef.current;
-                var subscriber = exports6.__subscriberRef.current;
+                var wrappedInteractions = exports5.__interactionsRef.current;
+                var subscriber = exports5.__subscriberRef.current;
                 if (subscriber !== null) {
                     subscriber.onWorkScheduled(wrappedInteractions, threadID);
                 }
@@ -2482,9 +2243,9 @@ function dew7() {
                 });
                 var hasRun = false;
                 function wrapped() {
-                    var prevInteractions = exports6.__interactionsRef.current;
-                    exports6.__interactionsRef.current = wrappedInteractions;
-                    subscriber = exports6.__subscriberRef.current;
+                    var prevInteractions = exports5.__interactionsRef.current;
+                    exports5.__interactionsRef.current = wrappedInteractions;
+                    subscriber = exports5.__subscriberRef.current;
                     try {
                         var returnValue;
                         try {
@@ -2495,7 +2256,7 @@ function dew7() {
                             try {
                                 returnValue = callback.apply(undefined, arguments);
                             } finally{
-                                exports6.__interactionsRef.current = prevInteractions;
+                                exports5.__interactionsRef.current = prevInteractions;
                                 if (subscriber !== null) {
                                     subscriber.onWorkStopped(wrappedInteractions, threadID);
                                 }
@@ -2515,7 +2276,7 @@ function dew7() {
                     }
                 }
                 wrapped.cancel = function cancel() {
-                    subscriber = exports6.__subscriberRef.current;
+                    subscriber = exports5.__subscriberRef.current;
                     try {
                         if (subscriber !== null) {
                             subscriber.onWorkCanceled(wrappedInteractions, threadID);
@@ -2539,7 +2300,7 @@ function dew7() {
                 {
                     subscribers.add(subscriber);
                     if (subscribers.size === 1) {
-                        exports6.__subscriberRef.current = {
+                        exports5.__subscriberRef.current = {
                             onInteractionScheduledWorkCompleted: onInteractionScheduledWorkCompleted,
                             onInteractionTraced: onInteractionTraced,
                             onWorkCanceled: onWorkCanceled,
@@ -2554,7 +2315,7 @@ function dew7() {
                 {
                     subscribers.delete(subscriber);
                     if (subscribers.size === 0) {
-                        exports6.__subscriberRef.current = null;
+                        exports5.__subscriberRef.current = null;
                     }
                 }
             }
@@ -2660,41 +2421,39 @@ function dew7() {
                     throw caughtError;
                 }
             }
-            exports6.unstable_clear = unstable_clear;
-            exports6.unstable_getCurrent = unstable_getCurrent;
-            exports6.unstable_getThreadID = unstable_getThreadID;
-            exports6.unstable_subscribe = unstable_subscribe;
-            exports6.unstable_trace = unstable_trace;
-            exports6.unstable_unsubscribe = unstable_unsubscribe;
-            exports6.unstable_wrap = unstable_wrap;
+            exports5.unstable_clear = unstable_clear;
+            exports5.unstable_getCurrent = unstable_getCurrent;
+            exports5.unstable_getThreadID = unstable_getThreadID;
+            exports5.unstable_subscribe = unstable_subscribe;
+            exports5.unstable_trace = unstable_trace;
+            exports5.unstable_unsubscribe = unstable_unsubscribe;
+            exports5.unstable_wrap = unstable_wrap;
         })();
+    }
+    return exports5;
+}
+var exports6 = {
+}, _dewExec6 = false;
+function dew6() {
+    if (_dewExec6) return exports6;
+    _dewExec6 = true;
+    {
+        exports6 = dew5();
     }
     return exports6;
 }
-const _schedulerTracingDevelopmentDewDew = dew7;
 var exports7 = {
 }, _dewExec7 = false;
-function dew8() {
+function dew7() {
     if (_dewExec7) return exports7;
     _dewExec7 = true;
     {
-        exports7 = _schedulerTracingDevelopmentDewDew();
-    }
-    return exports7;
-}
-const dew9 = dew8;
-var exports8 = {
-}, _dewExec8 = false;
-function dew10() {
-    if (_dewExec8) return exports8;
-    _dewExec8 = true;
-    {
         (function() {
             'use strict';
-            var React = dew3();
-            var _assign = dew1();
-            var Scheduler = dew6();
-            var tracing = dew9();
+            var React = dew2();
+            var _assign = dew();
+            var Scheduler = dew4();
+            var tracing = dew6();
             var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
             function warn(format) {
                 {
@@ -5843,8 +5602,8 @@ function dew10() {
                 var funcArgs = Array.prototype.slice.call(arguments, 3);
                 try {
                     func.apply(context, funcArgs);
-                } catch (error) {
-                    this.onError(error);
+                } catch (error1) {
+                    this.onError(error1);
                 }
             }
             var invokeGuardedCallbackImpl = invokeGuardedCallbackProd;
@@ -11024,12 +10783,12 @@ function dew10() {
                                 }
                             });
                             syncQueue = null;
-                        } catch (error) {
+                        } catch (error4) {
                             if (syncQueue !== null) {
                                 syncQueue = syncQueue.slice(i + 1);
                             }
                             Scheduler_scheduleCallback(Scheduler_ImmediatePriority, flushSyncCallbackQueue);
-                            throw error;
+                            throw error4;
                         } finally{
                             isFlushingSyncQueue = false;
                         }
@@ -13987,9 +13746,9 @@ function dew10() {
                             latestSetSnapshot(latestGetSnapshot(source._source));
                             var lane = requestUpdateLane(fiber);
                             markRootMutableRead(root2, lane);
-                        } catch (error) {
+                        } catch (error4) {
                             latestSetSnapshot(function() {
-                                throw error;
+                                throw error4;
                             });
                         }
                     };
@@ -14441,7 +14200,7 @@ function dew10() {
                                 if (objectIs(eagerState, currentState)) {
                                     return;
                                 }
-                            } catch (error) {
+                            } catch (error4) {
                             } finally{
                                 {
                                     ReactCurrentDispatcher$1.current = prevDispatcher;
@@ -19928,9 +19687,9 @@ function dew10() {
                         var threadID = computeThreadID(root5, lanes);
                         try {
                             subscriber.onWorkStarted(interactions, threadID);
-                        } catch (error) {
+                        } catch (error7) {
                             scheduleCallback(ImmediatePriority$1, function() {
-                                throw error;
+                                throw error7;
                             });
                         }
                     }
@@ -19945,9 +19704,9 @@ function dew10() {
                         var threadID = computeThreadID(root5, committedLanes);
                         subscriber.onWorkStopped(root5.memoizedInteractions, threadID);
                     }
-                } catch (error) {
+                } catch (error7) {
                     scheduleCallback(ImmediatePriority$1, function() {
-                        throw error;
+                        throw error7;
                     });
                 } finally{
                     var pendingInteractionMap = root5.pendingInteractionMap;
@@ -19959,9 +19718,9 @@ function dew10() {
                                 if (subscriber !== null && interaction.__count === 0) {
                                     try {
                                         subscriber.onInteractionScheduledWorkCompleted(interaction);
-                                    } catch (error) {
+                                    } catch (error7) {
                                         scheduleCallback(ImmediatePriority$1, function() {
-                                            throw error;
+                                            throw error7;
                                         });
                                     }
                                 }
@@ -21467,25 +21226,26 @@ function dew10() {
                     }
                 }
             }
-            exports8.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Internals;
-            exports8.createPortal = createPortal$1;
-            exports8.findDOMNode = findDOMNode;
-            exports8.flushSync = flushSync;
-            exports8.hydrate = hydrate;
-            exports8.render = render;
-            exports8.unmountComponentAtNode = unmountComponentAtNode;
-            exports8.unstable_batchedUpdates = batchedUpdates$1;
-            exports8.unstable_createPortal = unstable_createPortal;
-            exports8.unstable_renderSubtreeIntoContainer = renderSubtreeIntoContainer;
-            exports8.version = ReactVersion;
+            exports7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Internals;
+            exports7.createPortal = createPortal$1;
+            exports7.findDOMNode = findDOMNode;
+            exports7.flushSync = flushSync;
+            exports7.hydrate = hydrate;
+            exports7.render = render;
+            exports7.unmountComponentAtNode = unmountComponentAtNode;
+            exports7.unstable_batchedUpdates = batchedUpdates$1;
+            exports7.unstable_createPortal = unstable_createPortal;
+            exports7.unstable_renderSubtreeIntoContainer = renderSubtreeIntoContainer;
+            exports7.version = ReactVersion;
         })();
     }
-    return exports8;
+    return exports7;
 }
-const _reactDomDevelopmentDewDew = dew10;
-function dew11() {
-    if (_dewExec3) return exports3;
-    _dewExec3 = true;
+var exports8 = {
+}, _dewExec8 = false;
+function dew8() {
+    if (_dewExec8) return exports8;
+    _dewExec8 = true;
     function checkDCE() {
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === 'undefined' || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== 'function') {
             return;
@@ -21500,9 +21260,40 @@ function dew11() {
         }
     }
     {
-        exports3 = _reactDomDevelopmentDewDew();
+        exports8 = dew7();
     }
-    return exports3;
+    return exports8;
 }
-const __default1 = dew11();
+const __default1 = dew8();
+function Counter() {
+    const [count, setCount] = __default.useState(0);
+    return __default.createElement("div", null, __default.createElement("p", null, "You clicked ", count, " times"), __default.createElement("button", {
+        onClick: ()=>setCount(count + 1)
+    }, "Click me"));
+}
+function GHBadge(props) {
+    const { username , repoName  } = props;
+    const repoUrl = `https://github.com/${username}/${repoName}`;
+    const badgeUrl = `https://img.shields.io/static/v1?label=${username}&message=${repoName}&color=blue&logo=github`;
+    const altText = `${username} - ${repoName}`;
+    return __default.createElement("a", {
+        href: repoUrl
+    }, __default.createElement("img", {
+        src: badgeUrl,
+        alt: altText
+    }));
+}
+function App() {
+    return __default.createElement("div", null, __default.createElement("link", {
+        rel: "stylesheet",
+        href: "styles.css"
+    }), __default.createElement("div", {
+        className: "App"
+    }, __default.createElement("header", {
+        className: "App-header"
+    }, __default.createElement("h1", null, "React Deno Quickstart \u269b\ufe0f \u{1f995} \u{1f4e6}"), __default.createElement("h2", null, "Starter template for a React app built on Deno - including docs and CI"), __default.createElement(GHBadge, {
+        username: "MichaelCurrin",
+        repoName: "react-deno-quickstart"
+    })), __default.createElement(Counter, null)));
+}
 __default1.render(__default.createElement(__default.StrictMode, null, __default.createElement(App, null)), document.getElementById("root"));
