@@ -1,7 +1,7 @@
 /**
  * App module.
  *
- * Note - shim must come before components so it can be applied there.
+ * Note - shims must come **before** components so it can be applied there.
  */
 import { React } from "../deps.ts";
 import "./shims-react.ts";
