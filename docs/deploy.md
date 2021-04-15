@@ -15,7 +15,9 @@ That also copies static assets from `public`.
 
 ## Server production build locally
 
-To test the production build locally, run this.
+You can test the production build locally, before deploying.
+
+Run this:
 
 ```sh
 $ make static
@@ -25,11 +27,20 @@ Open in the browser on port `80` like this:
 
 - http://localhost
 
-This runs the `clean` and `build` steps for you and then serve the `build` directory as a static directory [static.ts](/static.ts). This lets us test build output locally for deploying.
+This will do the following for you.
 
-In a remote production environment, you should use Nginx or a similar tool to serve your build directory.
+1. Clean and build the `build/` directory.
+2. Serve that output directory as static assets, using the [static.ts](/static.ts) script and the ABC Deno library.
 
-Or use GitHub Pages or Netlify to serve the build directory as static files.
+If you prefer more control,
+
+1. Run `make clean build` to run both commands.
+2. Start a dev server in the `build` directory using your preferred choice - see this [gist](https://gist.github.com/MichaelCurrin/1a6116a4e0918c8468dc7e1a701a5f95) for ideas.
+
+For remote production environments, don't use Deno for serving. Rather use one of these options:
+
+- Use _Nginx_ or a similar tool to serve your build directory.
+- Or use a service like GitHub Pages or Netlify.
 
 
 ## CI flow
