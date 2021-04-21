@@ -24,7 +24,7 @@ install:
 	deno cache deps.ts
 	deno cache dev_deps.ts
 
-	deno install -f --allow-net --allow-read 'https://deno.land/x/esbuild@v0.11.11/mod.js'
+	deno install -f --allow-read 'https://deno.land/x/esbuild@v0.11.11/mod.js'
 
 upgrade:
 	deno cache --reload deps.ts
