@@ -24,6 +24,8 @@ install:
 	deno cache deps.ts
 	deno cache dev_deps.ts
 
+	deno install -f --allow-net --allow-read 'https://deno.land/x/esbuild@v0.11.11/mod.js'
+
 upgrade:
 	deno cache --reload deps.ts
 	deno cache --reload dev_deps.ts
@@ -47,7 +49,7 @@ clean:
 	rm -rf $(OUT_DIR)
 
 minify:
-	npx esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap \
+	esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap \
 		--define:'process.env.NODE_ENV="production"'
 	@echo 'Size comparison:'
 	@ls -l -h $(BUNDLED) $(MINIFIED)
