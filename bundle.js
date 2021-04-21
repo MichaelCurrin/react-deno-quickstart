@@ -80,7 +80,7 @@ function dew1() {
         (function() {
             'use strict';
             var _assign = dew();
-            var ReactVersion = '17.0.1';
+            var ReactVersion = '17.0.2';
             var REACT_ELEMENT_TYPE = 60103;
             var REACT_PORTAL_TYPE = 60106;
             exports1.Fragment = 60107;
@@ -10795,7 +10795,7 @@ function dew7() {
                     }
                 }
             }
-            var ReactVersion = '17.0.1';
+            var ReactVersion = '17.0.2';
             var NoMode = 0;
             var StrictMode = 1;
             var BlockingMode = 2;
