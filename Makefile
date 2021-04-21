@@ -24,6 +24,7 @@ install:
 	deno cache deps.ts
 	deno cache dev_deps.ts
 
+	# Does not work in CLI yet https://github.com/evanw/esbuild/releases
 	deno install -f --allow-read 'https://deno.land/x/esbuild@v0.11.11/mod.js'
 
 upgrade:
