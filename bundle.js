@@ -80,7 +80,7 @@ function dew1() {
         (function() {
             'use strict';
             var _assign = dew();
-            var ReactVersion = '17.0.2';
+            var ReactVersion = '17.0.1';
             var REACT_ELEMENT_TYPE = 60103;
             var REACT_PORTAL_TYPE = 60106;
             exports1.Fragment = 60107;
@@ -1664,7 +1664,6 @@ function dew2() {
     }
     return exports2;
 }
-const __default = dew2();
 var exports3 = {
 }, _dewExec3 = false;
 function dew3() {
@@ -10795,7 +10794,7 @@ function dew7() {
                     }
                 }
             }
-            var ReactVersion = '17.0.2';
+            var ReactVersion = '17.0.1';
             var NoMode = 0;
             var StrictMode = 1;
             var BlockingMode = 2;
@@ -21264,10 +21263,11 @@ function dew8() {
     }
     return exports8;
 }
-const __default1 = dew8();
+const __default = dew8();
+const __default1 = dew2();
 function Counter() {
-    const [count, setCount] = __default.useState(0);
-    return __default.createElement("div", null, __default.createElement("p", null, "You clicked ", count, " times"), __default.createElement("button", {
+    const [count, setCount] = __default1.useState(0);
+    return __default1.createElement("div", null, __default1.createElement("p", null, "You clicked ", count, " times"), __default1.createElement("button", {
         onClick: ()=>setCount(count + 1)
     }, "Click me"));
 }
@@ -21276,24 +21276,24 @@ function GHBadge(props) {
     const repoUrl = `https://github.com/${username}/${repoName}`;
     const badgeUrl = `https://img.shields.io/static/v1?label=${username}&message=${repoName}&color=blue&logo=github`;
     const altText = `${username} - ${repoName}`;
-    return __default.createElement("a", {
+    return __default1.createElement("a", {
         href: repoUrl
-    }, __default.createElement("img", {
+    }, __default1.createElement("img", {
         src: badgeUrl,
         alt: altText
     }));
 }
 function App() {
-    return __default.createElement("div", null, __default.createElement("link", {
+    return __default1.createElement("div", null, __default1.createElement("link", {
         rel: "stylesheet",
         href: "styles.css"
-    }), __default.createElement("div", {
+    }), __default1.createElement("div", {
         className: "App"
-    }, __default.createElement("header", {
+    }, __default1.createElement("header", {
         className: "App-header"
-    }, __default.createElement("h1", null, "React Deno Quickstart \u269b\ufe0f \u{1f995} \u{1f4e6}"), __default.createElement("p", null, "Starter template for a React app built on Deno - including docs and CI"), __default.createElement(GHBadge, {
+    }, __default1.createElement("h1", null, "React Deno Quickstart \u269b\ufe0f \u{1f995} \u{1f4e6}"), __default1.createElement("p", null, "Starter template for a React app built on Deno - including docs and CI"), __default1.createElement(GHBadge, {
         username: "MichaelCurrin",
         repoName: "react-deno-quickstart"
-    })), __default.createElement(Counter, null)));
+    })), __default1.createElement(Counter, null)));
 }
-__default1.render(__default.createElement(__default.StrictMode, null, __default.createElement(App, null)), document.getElementById("root"));
+__default.render(__default1.createElement(__default1.StrictMode, null, __default1.createElement(App, null)), document.getElementById("root"));
