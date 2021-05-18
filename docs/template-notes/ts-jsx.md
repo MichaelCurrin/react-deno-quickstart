@@ -1,4 +1,6 @@
 # TypeScript and JSX
+> How to ensure your React / JSX code is understood by the Deno's TS compiler
+
 
 ## Issues
 
