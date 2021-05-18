@@ -9,9 +9,9 @@
 ## Related template projects
 
 - [![MichaelCurrin - react-quickstart](https://img.shields.io/static/v1?label=MichaelCurrin&message=react-quickstart&color=blue&logo=github)](https://github.com/MichaelCurrin/react-quickstart)
-    - React and Node. Conventional flow using `npx create-react-app`.
+    - React and Node. Conventional flow using a project generated with `npx create-react-app`, plus CI to deploy.
 - [![MichaelCurrin - react-frontend-quickstart](https://img.shields.io/static/v1?label=MichaelCurrin&message=react-frontend-quickstart&color=blue&logo=github)](https://github.com/MichaelCurrin/react-frontend-quickstart)
-    - React without Node or a build step. Thanks to ES Modules. It has a similar to this React Deno project, but even lighter without any CI.
+    - React but without Node or a build step. Thanks to ES Modules. It has a similar setup to this React Deno project, but even lighter because of no Node, Deno or CI.
 - [![MichaelCurrin - deno-project-template](https://img.shields.io/static/v1?label=MichaelCurrin&message=deno-project-template&color=blue&logo=github)](https://github.com/MichaelCurrin/deno-project-template)
     - A generic Deno project.
 - [![MichaelCurrin - node-project-template](https://img.shields.io/static/v1?label=MichaelCurrin&message=node-project-template&color=blue&logo=github)](https://github.com/MichaelCurrin/node-project-template)
