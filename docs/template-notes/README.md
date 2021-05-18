@@ -4,7 +4,11 @@
 
 - [Features](features.md)
 - [Purpose](purpose.md)
-- [Resources](resources.md)
 - [Comparison with other projects](comparison.md)
 - [Limitations](limitations.md)
 - [TypeScript JSX](ts-jsx.md)
+
+Learn more:
+
+- [Resources](resources.md)
+- [Related projects](related-projects.md)
