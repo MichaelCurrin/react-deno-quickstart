@@ -6,7 +6,7 @@
 - [Purpose](purpose.md)
 - [Comparison with other projects](comparison.md)
 - [Limitations](limitations.md)
-- [TypeScript JSX](ts-jsx.md)
+- [TypeScript with JSX](ts-jsx.md)
 
 Learn more:
 
