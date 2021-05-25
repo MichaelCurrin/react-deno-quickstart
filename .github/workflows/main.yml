@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - "docs/**"
       - README.md
+
   pull_request:
     branches: main
     paths-ignore:
@@ -13,8 +14,8 @@ on:
       - README.md
 
 jobs:
-  test-build:
-    name: Test and build app
+  build-deploy:
+    name: Test, build and deploy app
 
     runs-on: ubuntu-latest
 
@@ -29,16 +30,16 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Check formatting
+      - name: Check formatting 🎨
         run: make fmt-check
 
       - name: Lint 🧐
         run: make lint
 
-      - name: Build CLI app 🏗️
+      - name: Build 🏗️
         run: make build
 
-      - name: Deploy to GH Pages 🚀
+      - name: Deploy to GitHub Pages 🚀
         if: ${{ github.event_name != 'pull_request' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
