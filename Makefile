@@ -1,9 +1,11 @@
-IGNORE = --ignore=build,public,docs,README.md
-CONFIG = --config tsconfig.json
 
+PUBLIC_DIR = public
 OUT_DIR = build
 BUNDLED := $(OUT_DIR)/bundle.js
 MINIFIED := $(OUT_DIR)/bundle.min.js
+
+IGNORE = --ignore=$(PUBLIC_DIR),$(OUT_DIR),docs,README.md
+CONFIG = --config tsconfig.json
 
 .PHONY: hooks $(OUT_DIR)
 
