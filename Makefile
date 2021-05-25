@@ -41,24 +41,31 @@ l lint:
 	deno lint --unstable $(IGNORE)
 
 
-s serve:
-	deno run $(CONFIG) --allow-net --allow-read --unstable --watch server.js
-
-
 clean:
 	rm -rf $(OUT_DIR)
+
+assets: clean
+	mkdir -p $(OUT_DIR)
+	cp $(PUBLIC_DIR)/styles.css $(OUT_DIR)
+
+bundle-dev: assets
+	cp $(PUBLIC_DIR)/dev.html $(OUT_DIR)/index.html
+	deno bundle --watch $(CONFIG) src/index.jsx $(BUNDLED)
+
+bundle-prod: assets
+	cp $(PUBLIC_DIR)/prod.html $(OUT_DIR)/index.html
+	deno bundle $(CONFIG) src/index.jsx $(BUNDLED)
+
+
+static-server:
+	deno run $(CONFIG) --allow-net --allow-read static.ts
+
+s serve:
+	$(MAKE) -j 2 bundle-dev static-server
+
 
 minify:
 	npx esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap \
 		--define:'process.env.NODE_ENV="production"'
-	@echo 'Size comparison:'
-	@ls -l -h $(BUNDLED) $(MINIFIED)
 
-build:
-	mkdir -p $(OUT_DIR)
-	cp public/* $(OUT_DIR)
-	deno bundle $(CONFIG) src/index.jsx $(BUNDLED)
-	$(MAKE) minify
-
-static: clean build
-	deno run $(CONFIG) --allow-net --allow-read static.ts
+build: bundle-prod minify
