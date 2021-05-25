@@ -29,7 +29,13 @@ Example:
 
 You might use your app's name in place of the generic "bundle".
 
-For minification, you can replace use of `esbuild` in [Makefile](/Makefile) with another tool that doesn't depend on `npm` / `npx` to run. Such as a Deno package. I tried `minifier` on `Deno.land/x`, but it was not reliable.
+### Minifying
+
+If you want to go full Deno and no Node, then you can remove use of `npm` / `npx` in [Makefile](/Makefile). Go with another approach.
+
+Such as a Deno package. I tried `minifier` on `Deno.land/x`, but it was not reliable.
+
+Or you can download `esbuild` as a binary directly from NPM registry using curl, but, you need to know your OS. Using the `npx` option figures that out for you.
 
 
 ## Styling
