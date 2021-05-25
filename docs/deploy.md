@@ -21,8 +21,7 @@ See the [main.yml](/.github/workflows/main.yml) workflow file and the repo's _Ac
 
 ## Hosting
 
-The output directory from the [Build](#build) section can be served as static content using Nginx or a static hosting service like Netlify or GitHub Pages. You do not need Deno running host this site.
-
+The output directory from the [Build](#build) section can be served as static content using Nginx or a static hosting service like Netlify or [GitHub Pages][]. You do not need Deno running host this site.
 
 To set up GitHub Pages:
 

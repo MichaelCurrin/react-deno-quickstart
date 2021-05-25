@@ -16,17 +16,19 @@ Here is what I found searching for "React Deno". They all use Deno on the server
     - two directories for backend in Node or React and `react` directory for frontend (note `package.json`).
 - [Build an Isomorphic Application using Deno and React without WebPack](https://decipher.dev/deno-by-example/advanced-react-ssr/) guide.
 
-Server-side rendering means running a Deno server in production and structuring as an API or an MVC. Maybe with a database.
+Server-Side Rendering means running a Deno server in production for _dynamic content_. It means structuring as an API or an MVC app. Maybe with a database.
 
-This is not relevant for me, looking for make a Single-Page Application that can be served as static files with Nginx or GH Pages.
+This is not relevant for me, looking for make a Single-Page Application that can be served as _static_ files with Nginx or a service GH Pages.
 
-Some of these handle Node and NPM to build the React frontend. Which I think misses the point of Deno as a Node replacement.
+Some of the Deno projects above handle Node and NPM to build the React frontend... which I think misses the point of Deno as a Node replacement.
 
 
 ## Frontend
 
 Some others use Deno to handle a React dev server like I want. But they don't support a step to build a static app. I can't recall one of those.
 
-I did also find this which bundles a client-side React app. But, it is designed to be used with the SSR Deno, which I don't want. Also there is code there I don't need. I want to stick to the basics. Also that uses `Deno.bundle` in TS code instead of in the terminal which seems weird.
+I did also find this which bundles a client-side React app. But, it is designed to be used with the SSR Deno, which I don't want. Also there is code there I don't need. I want to stick to the basics.
+
+Also that uses `Deno.bundle` in TS code, while I prefer to use the light Deno CLI commands.
 
 - [How To Bundle Code For Deno Web Applications](https://dev.to/craigmorten/deno-bundle-for-server-side-rendered-react-11c2) post
