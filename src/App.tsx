@@ -1,7 +1,8 @@
 /**
  * App module.
  *
- * Note - shims must come **before** components so it can be applied there.
+ * Note - shims must come **before** components so it can be applied there. Update: this doesn't
+ * seem to matter anymore.
  */
 import { React } from "../deps.ts";
 import Counter from "./components/Counter.tsx";
