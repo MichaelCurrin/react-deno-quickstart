@@ -24,13 +24,6 @@
 </div>
 
 
-## Disclaimer
-
-This project's works well to build a bundled React app for static serving.
-
-There is just a bug on the dev server where the app is frozen. There is an [issue](https://github.com/MichaelCurrin/react-deno-quickstart/issues/1) for this.
-
-
 ## Preview
 
 This template project uses **Deno** to build a **React** app (no Node.js here). The app gets deployed using GH Actions and then served as a GitHub Pages site.
@@ -62,13 +55,13 @@ Start a dev server:
 $ make serve
 ```
 
-Create a bundled JS file of all your app code and depenendencies.
+Create a bundled minified JS file of all your app code and depenendencies.
 
 ```sh
 $ make build
 ```
 
-The output JS file then can be loaded in the browser using [index.html](/public/index.html). Which means you can host your rendered React application as SPA web app anywhere, such as on GitHub Pages (like this project) or Netlify.
+The output JS file then can be loaded in the browser using a `index.html` page. Which means you can host your rendered React application as SPA web app anywhere, such as on GitHub Pages (like this project) or Netlify.
 
 
 ## About this template
@@ -77,7 +70,9 @@ The output JS file then can be loaded in the browser using [index.html](/public/
 
 - Provides a basic **template** project so you can quickly setup your own React + Deno project, without much Deno experience.
 - Uses **React version 17**.
-- Uses **Deno** and **Make** to handle dev and production build tasks. No more Node and NPM.
+- Uses **Deno** and **make** to handle dev and production build tasks. 
+    - No more Node and NPM.
+    - TypeScript, JSX, formatting and linting are all supported by Deno - no packages needed.
 - Deploys as a **GitHub Pages** static site using GitHub Actions. No manual deploy steps or server management needed.
 
 See the [Template notes](/docs/template-notes/) section of the docs for help on how to use this project and to find out what is included.
@@ -86,7 +81,7 @@ Start building with React and Deno:
 
 - [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
-Want to stick to Node.js or compare how this React/Deno app looks compared to React/Node app? See my Node-based template:
+Want to stick with Node.js or compare how this React/Deno app looks compared to React/Node app? See my Node-based template:
 
 - [![MichaelCurrin - react-quickstart](https://img.shields.io/static/v1?label=MichaelCurrin&message=react-quickstart&color=blue&logo=github)](https://github.com/MichaelCurrin/react-quickstart)
 
