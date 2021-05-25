@@ -1,3 +1,6 @@
+/**
+ * GitHub Badge module.
+ */
 import { React } from "../../deps.ts";
 
 type Repo = {
