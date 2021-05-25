@@ -4,17 +4,11 @@
 
 ## Issues
 
-### No types in server
-
-There are several errors that appear if `server.js` is converted to `server.ts` - around lack of explicit types set on variables and also `React` and `ReactDOMServer` are only known to TS as `{}` so errors appear as functions missing.
-
-The script is boilerplate I copied and won't change, so I am not worried about types there.
-
 ### JSX elements error
 
 Deno supports `.ts` for TS and `.jsx` for your React files with JSX syntax.
 
-It also supports, `.tsx`, which means TS checks get applied. But, Deno will complain.
+It also supports, `.tsx`, which means TS checks do get applied. But, Deno will complain.
 
 ```
 TS7026 [ERROR]: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
