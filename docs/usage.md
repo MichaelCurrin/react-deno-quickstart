@@ -2,6 +2,8 @@
 
 This project uses `make` - a task runner available on Linux and macOS. If you are on Windows, you need to install `make`.
 
+Tasks are defined in [Makefile](/Makefile).
+
 
 ## Run checks
 
