@@ -1,4 +1,3 @@
-
 PUBLIC_DIR = public
 OUT_DIR = build
 BUNDLED := $(OUT_DIR)/bundle.js
@@ -65,7 +64,10 @@ s serve:
 
 
 minify:
-	npx esbuild $(BUNDLED) --outfile=$(MINIFIED) --minify --sourcemap \
+	npx esbuild $(BUNDLED) \
+		--outfile=$(MINIFIED) \
+		--minify \
+		--sourcemap \
 		--define:'process.env.NODE_ENV="production"'
 
 build: bundle-prod minify
