@@ -28,7 +28,9 @@
 
 ## Preview
 
-This template project uses **Deno** to build a **React** app (no Node.js here). The app gets deployed using GH Actions and then served as a GitHub Pages site.
+This template project uses **Deno** to build a **React** app and output static assets. No Node.js or NPM used there. 
+
+The app gets deployed with CI using GH Actions. Then it is served as a static [GitHub Pages][] site.
 
 This is what the demo site looks like:
 
@@ -47,6 +49,8 @@ This is what the demo site looks like:
 [![Use this template](https://img.shields.io/badge/Generate-Use_this_template-2ea44f?style=for-the-badge)](https://github.com/MichaelCurrin/react-deno-quickstart/generate)
 
 </div>
+
+[GitHub Pages]: https://pages.github.com/
 
 
 ## Sample usage
