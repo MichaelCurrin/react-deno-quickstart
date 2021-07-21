@@ -13,14 +13,16 @@
 
 
 <div align="center">
-    <img src="https://raw.githubusercontent.com/github/explore/master/topics/react/react.png"
-         alt="node icon"
-         title="Node.js"
-         width="150" height="150" />
-    <img src="https://raw.githubusercontent.com/github/explore/master/topics/deno/deno.png"
-         alt="node icon"
-         title="Node.js"
-        width="150" height="150" />
+    <a href="https://reactjs.org/" title="Go to React homepage">
+        <img src="https://raw.githubusercontent.com/github/explore/master/topics/react/react.png"
+             alt="node icon"
+             width="130" height="130" />
+    </a>
+    <a href="https://deno.land" title="Go to Deno homepage">
+        <img src="https://raw.githubusercontent.com/github/explore/master/topics/deno/deno.png"
+             alt="node icon"
+             width="130" height="130" />
+    </a>
 </div>
 
 
@@ -32,7 +34,7 @@ This is what the demo site looks like:
 
 <div align="center">
     <a href="https://michaelcurrin.github.io/react-deno-quickstart/">
-        <img src="/sample.png" alt="Sample screenshot" title="Sample screenshot" width="500" />
+        <img src="/sample.png" alt="Sample screenshot" title="Go to demo site" width="500" />
     </a>
 </div>
 
